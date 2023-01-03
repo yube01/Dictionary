@@ -2,4 +2,94 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+}
+
+body{
+    background-color: rgb(164, 226, 232);
+}
+
+.container{
+    background-color: rgb(251, 249, 249);
+    width: 90vmin;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 6rem 2rem;
+    border-radius: 1rem;
+
+}
+
+.searchBox{
+    justify-content: space-between;
+    display: flex;
+   
+    gap: 2rem;
+    font-weight: 500;
+    color: black;
+    width: 100%;
+    
+}
+
+#inputBox{
+    flex: 6;
+    padding: 1rem 0 ;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    border-bottom: 0.2rem solid rgb(47, 47, 195);
+   
+}
+
+.searchBox button{
+    border: none;
+    background-color: rgb(105, 31, 233);
+    border-radius: 0.5rem;
+
+}
+#searchBtn{
+    flex: 1.5;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    
+    
+}
+
+.result{
+    padding: 3rem 0 0 0;
+
+}
+
+.word{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(121, 121, 236, 0.763);
+}
+.word h3{
+    font-size: 3rem;
+}
+
+.wordPro{
+    display: flex;
+    margin: 1rem 0 0 0;
+    color: rgb(144, 143, 145);
+    gap: 0.5rem;
+}
+.wordMeaning{
+    margin: 2rem 0;
+    color: grey;
+    font-size: 1.3rem;
+}
+
+.wordExample{
+    border-left: 0.5rem solid rgb(143, 102, 230) ;
+    font-size: 1.3rem;
+    color: grey;
+}
+.wordExample p{
+    margin-left: 1rem;
+    font-style: italic
 }
