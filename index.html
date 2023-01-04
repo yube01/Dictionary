@@ -54,8 +54,9 @@
             <div class="wordPro">
                 <h3>
                     ${data[0].meanings[0].partOfSpeech}
-                    
-                </h3>
+                 </h3>
+                
+                
                 <h3>
                     ${data[0].phonetic}
                 </h3>
@@ -65,12 +66,14 @@
                 <p>
                    ${data[0].meanings[0].definitions[0].definition}
                 </p>
+                
 
             </div>
             <div class="wordExample">
                 <p>
                     ${data[0].meanings[0].definitions[0].example || ""}
                 </p>
+             
             </div>
             
 
@@ -79,6 +82,10 @@
         sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound)
 
+        }).catch(()=>{
+            result.innerHTML = `<h3 class="error" >
+                Sorry Meaning Not Found
+                </h3>`
         })
      
     })
