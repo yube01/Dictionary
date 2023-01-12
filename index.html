@@ -34,8 +34,21 @@
     const searchBtn = document.getElementById("searchBtn");
     const result = document.getElementById("result")
     const sound = document.getElementById("sound")
+    const enter = document.getElementById("inputBox")
 
-    searchBtn.addEventListener("click", () =>{
+    searchBtn.addEventListener("click", api )
+
+
+    enter.addEventListener("keyup", (e)=>{
+        if( e.keyCode === 13){
+            e.preventDefault(),
+            api();
+    }
+    })
+
+
+
+    var api = () => {
        let  inputBox = document.getElementById("inputBox").value;
         fetch(`${url} ${inputBox}` )
         .then((response) =>response.json())
@@ -75,10 +88,7 @@
                 </p>
              
             </div>
-            
-
-        
-        `;
+            `;
         sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
         console.log(sound)
 
@@ -88,7 +98,7 @@
                 </h3>`
         })
      
-    })
+    }
 
     function playSound (){
         sound.play();
